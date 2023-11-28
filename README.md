@@ -69,11 +69,6 @@ int main() {
 
 - This program is a simple representation of an e-commerce shopping system and may require further enhancements for a real-world application.
 - Feel free to customize and extend the code to meet specific requirements.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
+  
 
 Make sure to replace the placeholders like `<placeholders>` with actual details. Additionally, you may want to include more sections or details based on your project's needs.
