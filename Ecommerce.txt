@@ -1,0 +1,326 @@
+#include<iostream>
+#include<string.h>
+#include<fstream>
+using namespace std;
+class Mobile
+{
+    protected:
+        int choice,quantity,mtotal;
+    public:
+        Mobile()
+        {
+            choice=0;
+            quantity=0;
+        }
+        void getdatam()
+        {
+            cout << "\nMOBILE DETAILS" << endl;
+            cout << "1. APPLE -> PRICE : 50000" << endl;
+            cout << "2. SAMSUNG -> PRICE : 40000" << endl;
+            cout << "3. XIAOMI -> PRICE : 10000" << endl;
+            cin>>choice;
+            cout << "Enter the quantity: ";
+            cin >> quantity;
+            if(choice==1)
+            {
+                mtotal=50000*quantity;
+                cout<<"\nYou have sucessfully purchased mobile\nMobile name:\tAPPLE\nTotal amount:\t"<<mtotal<<endl;
+                ofstream fout;
+                fout.open("Bill.txt",ios::app);
+                fout<<"Mobile Name:"<<"\t\t\t\t\t\t\t"<<"APPLE"<<"\nTotal amount:"<<"\t\t\t\t\t\t\t"<<mtotal<<endl;
+            }
+            else if(choice==2)
+            {
+                mtotal=40000*quantity;
+                cout<<"\nYou have sucessfully purchased mobile\nMobile name:\tSAMSUNG\nTotal amount:\t"<<mtotal<<endl;
+                ofstream fout;
+                fout.open("Bill.txt",ios::app);
+                fout<<"Mobile Name:"<<"\t\t\t\t\t\t\t"<<"SAMSUNG"<<"\nTotal amount:"<<"\t\t\t\t\t\t\t"<<mtotal<<endl;
+            }
+            else if(choice==3)
+            {
+                mtotal=10000*quantity;
+                cout<<"\nYou have sucessfully purchased mobile\nMobile name:\tXIAOMI\nTotal amount:\t"<<mtotal<<endl;
+                ofstream fout;
+                fout.open("Bill.txt",ios::app);
+                fout<<"Mobile Name:"<<"\t\t\t\t\t\t\t"<<"XIAOMI"<<"\nTotal amount:"<<"\t\t\t\t\t\t\t"<<mtotal<<endl;
+            }
+            else
+            {
+                cout<<"Enter the correct number!!.."<<endl;
+            }
+        }
+};
+
+class Laptop
+{
+    protected:
+        int choice,quantity,ltotal;
+    public:
+        Laptop()
+        {
+            choice=0;
+            quantity=0;
+        }
+        void getdatal()
+        {
+            cout << "\nLAPTOP DETAILS" << endl;
+            cout << "1. HP -> PRICE : 200000" << endl;
+            cout << "2. APPLE -> PRICE : 150000" << endl;
+            cout << "3. ASUS -> PRICE : 30000" << endl;
+            cin>>choice;
+            cout << "Enter the quantity: ";
+            cin >> quantity;
+            if(choice==1)
+            {
+                ltotal=200000*quantity;
+                cout<<"\nYou have sucessfully purchased laptop\nlaptop name:\tHP\nTotal amount:\t"<<ltotal<<endl;
+                ofstream fout;
+                fout.open("Bill.txt",ios::app);
+                fout<<"Laptop Name:"<<"\t\t\t\t\t\t\t"<<"HP"<<"\nTotal amount:"<<"\t\t\t\t\t\t\t"<<ltotal<<endl;
+            }
+            else if(choice==2)
+            {
+                ltotal=150000*quantity;
+                cout<<"\nYou have sucessfully purchased laptop\nlaptop name:\tAPPLE\nTotal amount:\t"<<ltotal<<endl;
+                ofstream fout;
+                fout.open("Bill.txt",ios::app);
+                fout<<"Laptop Name:"<<"\t\t\t\t\t\t\t"<<"APPLE"<<"\nTotal amount:"<<"\t\t\t\t\t\t\t"<<ltotal<<endl;
+            }
+            else if(choice==3)
+            {
+                ltotal=30000*quantity;
+                cout<<"\nYou have sucessfully purchased laptop\nlaptop name:\tASUS\nTotal amount:\t"<<ltotal<<endl;
+                ofstream fout;
+                fout.open("Bill.txt",ios::app);
+                fout<<"Laptop Name:"<<"\t\t\t\t\t\t\t"<<"ASUS"<<"\nTotal amount:"<<"\t\t\t\t\t\t\t"<<ltotal<<endl;
+            }
+            else
+            {
+                cout<<"Enter the correct number!!.."<<endl;
+            }
+        }
+};
+
+class Headphone
+{
+   protected:
+        int choice,quantity,htotal;
+    public:
+        Headphone()
+        {
+            choice=0;
+            quantity=0;
+        }
+        void getdatah()
+        {
+            cout << "\nHEADPHONE DETAILS" << endl;
+            cout << "1. JBL -> PRICE : 5000" << endl;
+            cout << "2. SONY -> PRICE : 6000" << endl;
+            cout << "3. PHILIPS -> PRICE : 2500" << endl;
+            cin>>choice;
+            cout << "Enter the quantity: ";
+            cin >> quantity;
+            if(choice==1)
+            {
+                htotal=5000*quantity;
+                cout<<"\nYou have sucessfully purchased Headphone\nHeadphone name:\tJBL\nTotal amount:\t"<<htotal<<endl;
+                ofstream fout;
+                fout.open("Bill.txt",ios::app);
+                fout<<"Headphone Name:"<<"\t\t\t\t\t\t\t"<<"JBL"<<"\nTotal amount:"<<"\t\t\t\t\t\t\t"<<htotal<<endl;
+            }
+            else if(choice==2)
+            {
+                htotal=6000*quantity;
+                cout<<"\nYou have sucessfully purchased Headphone\nHeadphone name:\tSONY\nTotal amount:\t"<<htotal<<endl;
+                ofstream fout;
+                fout.open("Bill.txt",ios::app);
+                fout<<"Headphone Name:"<<"\t\t\t\t\t\t\t"<<"SONY"<<"\nTotal amount:"<<"\t\t\t\t\t\t\t"<<htotal<<endl;
+            }
+            else if(choice==3)
+            {
+                htotal=2500*quantity;
+                cout<<"\nYou have sucessfully purchased Headphone\nHeadphone name:\tPHILIPS\nTotal amount:\t"<<htotal<<endl;
+                ofstream fout;
+                fout.open("Bill.txt",ios::app);
+                fout<<"Headphone Name:"<<"\t\t\t\t\t\t\t"<<"PHILIPS"<<"\nTotal amount:"<<"\t\t\t\t\t\t\t"<<htotal<<endl;
+            }
+            else
+            {
+                cout<<"Enter the correct number!!.."<<endl;
+            }
+            //cout<<"h"<<htotal;
+        } 
+};
+
+class Watch
+{
+    protected:
+        int choice,quantity,wtotal;
+    public:
+        Watch()
+        {
+            choice=0;
+            quantity=0;
+        }
+        void getdataw()
+        {
+            cout << "\nWATCH DETAILS" << endl;
+            cout << "1. ROLEX -> PRICE : 250000" << endl;
+            cout << "2. TAG HEUER -> PRICE : 1000" << endl;
+            cout << "3. TITAN -> PRICE : 5000" << endl;
+            cin>>choice;
+            cout << "Enter the quantity: ";
+            cin >> quantity;
+            if(choice==1)
+            {
+                wtotal=250000*quantity;
+                cout<<"\nYou have sucessfully purchased Watch\nWatch name:\tROLEX\nTotal amount:\t"<<wtotal<<endl;
+                ofstream fout;
+                fout.open("Bill.txt",ios::app);
+                fout<<"Headphone Name:"<<"\t\t\t\t\t\t\t\t"<<"ROLEX"<<"\nTotal amount:"<<"\t\t\t\t\t\t\t"<<wtotal<<endl;
+            }
+            else if(choice==2)
+            {
+                wtotal=1000*quantity;
+                cout<<"\nYou have sucessfully purchased Watch\nWatch name:\tTAG HEUER\nTotal amount:\t"<<wtotal<<endl;
+                ofstream fout;
+                fout.open("Bill.txt",ios::app);
+                fout<<"Watch Name:"<<"\t\t\t\t\t\t\t\t"<<"TAG HEUER"<<"\nTotal amount:"<<"\t\t\t\t\t\t\t"<<wtotal<<endl;
+            }
+            else if(choice==3)
+            {
+                wtotal=5000*quantity;
+                cout<<"\nYou have sucessfully purchased Watch\nWatch name:\tTITAN\nTotal amount:\t"<<wtotal<<endl;
+                ofstream fout;
+                fout.open("Bill.txt",ios::app);
+                fout<<"Watch Name:"<<"\t\t\t\t\t\t\t\t"<<"TITAN"<<"\nTotal amount:"<<"\t\t\t\t\t\t\t"<<wtotal<<endl;
+            }
+            else
+            {
+                cout<<"Enter the correct number!!.."<<endl;
+            }
+        } 
+};
+class Speaker
+{
+    protected:
+        int choice,quantity,stotal;
+    public:
+        Speaker()
+        {
+            choice=0;
+            quantity=0;
+        }
+        void getdatas()
+        {
+            cout << "\nSPEAKER DETAILS" << endl;
+            cout << "13. JBL -> PRICE : 20000" << endl;
+            cout << "14. BOSE -> PRICE : 30000" << endl;
+            cout << "15. PHILIPS -> PRICE : 15000" << endl;
+            cin>>choice;
+            cout << "Enter the quantity: ";
+            cin >> quantity;
+            if(choice==1)
+            {
+                stotal=20000*quantity;
+                cout<<"\nYou have sucessfully purchased Speaker\1Speaker name:\tJBL\nTotal amount:\t"<<stotal<<endl;
+                ofstream fout;
+                fout.open("Bill.txt",ios::app);
+                fout<<"Speaker Name:"<<"\t\t\t\t\t\t\t"<<"JBL"<<"\nTotal amount:"<<"\t\t\t\t\t\t\t"<<stotal<<endl;
+            }
+            else if(choice==2)
+            {
+                stotal=30000*quantity;
+                cout<<"\nYou have sucessfully purchased Speaker\1Speaker name:\tBOSE\nTotal amount:\t"<<stotal<<endl;
+                ofstream fout;
+                fout.open("Bill.txt",ios::app);
+                fout<<"Speaker Name:"<<"\t\t\t\t\t\t\t"<<"BOSE"<<"\nTotal amount:"<<"\t\t\t\t\t\t\t"<<stotal<<endl;
+            }
+            else if(choice==3)
+            {
+                stotal=15000*quantity;
+                cout<<"\nYou have sucessfully purchased Speaker\1Speaker name:\tPHILIPS\nTotal amount:\t"<<stotal<<endl;
+                ofstream fout;
+                fout.open("Bill.txt",ios::app);
+                fout<<"Speaker Name:"<<"\t\t\t\t\t\t\t"<<"PHILIPS"<<"\nTotal amount:"<<"\t\t\t\t\t\t\t"<<stotal<<endl;
+            }
+            else
+            {
+                cout<<"Enter the correct number!!.."<<endl;
+            }
+            //cout<<"s"<<stotal;
+        } 
+};
+
+class Cal_tot_amt:public Mobile,public Laptop,public Headphone,public Watch,public Speaker
+{
+    protected: 
+        int tot_amt,inp;
+    public:
+        void cal()
+        {
+            while(inp!=6)
+            {
+                cout << "What do you want to buy?" << endl;
+                cout << "1. MOBILE" << endl;
+                cout << "2. LAPTOP" << endl;
+                cout << "3. HEADPHONES" << endl;
+                cout << "4. WATCH" << endl;
+                cout << "5. SPEAKER" << endl;
+                cout << "6. EXIT"<<endl;
+                cin>>inp;
+                if(inp==1)
+                {    
+                    getdatam();        
+                }
+                else if(inp==2)
+                {
+                    getdatal();
+                }
+                else if(inp==3)
+                {
+                    getdatah();
+                }
+                else if(inp==4)
+                {
+                    getdataw();
+                }
+                else if(inp==5)
+                {
+                    getdatas();
+                }
+                else if(inp==6)
+                {
+                    inp=6;
+                }
+                else 
+                {
+                    cout<<"Enter the correct number!!..";
+                }
+            }
+        tot_amt=mtotal+ltotal+stotal+wtotal+htotal;
+        ofstream fout;
+        fout.open("Bill.txt",ios::app);
+        fout<<"\n-----------------------------------------------------\n";
+        fout<<"Total amount:"<<"\t\t\t\t\t\t\t"<<tot_amt;
+        fout<<"\n-----------------------------------------------------\n";
+        fout<<"\n-------------*THANK YOU FOR SHOPPING*----------------\n";
+        }
+};
+
+int main()
+{
+    string name;
+    cout<<"\t\t\t\t------------------------------\n";
+    cout<<"\t\t\t\tWELCOME TO ECOMMERECE SHOPPING\n";
+    cout<<"\t\t\t\t------------------------------\n";
+    cout<<"Enter the name:";
+    getline(cin,name);
+    ofstream fout;
+    fout.open("Bill.txt");
+    fout<<"----------------------*BILL*-------------------------\n""Name:"<<"\t\t\t\t\t\t\t\t\t"<<name<<endl;
+    Cal_tot_amt obj;
+    obj.cal();
+    return 0;
+}
